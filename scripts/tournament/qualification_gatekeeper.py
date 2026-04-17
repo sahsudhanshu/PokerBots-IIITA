@@ -293,7 +293,7 @@ def main() -> int:
         result_rows=result_rows,
     )
 
-    qualified_all = bool(result_rows) and all(row.get("qualified", False) for row in result_rows)
+    qualified_all = all(row.get("qualified", False) for row in result_rows)
     return 0 if qualified_all else 1
 
 

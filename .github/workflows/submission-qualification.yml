@@ -58,6 +58,7 @@ jobs:
         with:
           name: qualification-report
           path: .qualification
+          include-hidden-files: true
 
       - name: Comment PR with Qualification Summary
         if: always()
